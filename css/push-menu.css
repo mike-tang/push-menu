@@ -1,0 +1,120 @@
+/* General Styles */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot');
+	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
+		url('../fonts/fontawesome.woff') format('woff'),
+		url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body, html {
+	font-family: 'Lato', Arial, sans-serif;
+	font-size: 62.5%;
+	padding: 0; 
+	margin: 0;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 90%;
+	max-width: 30.0rem;
+	margin: 0 auto;
+}
+
+/* Toggle Button */
+
+button {
+	display: block;
+	width: 100%;
+	padding: 1.6rem;
+	margin: 10px 0;
+	font-size: 1.6rem;
+	font-weight: 300;
+	color: #fff;
+	border: none;
+	background: #75B0CF;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #58859C;
+}
+
+button.active {
+	background: #58859C;
+}
+
+/* Push Menu */
+.aside {
+	background: #454C4F;
+	position: fixed;
+	width: 30.0rem;
+	height: 100%;
+	top: 0;
+	z-index: 9999;
+}
+
+.aside h3 {
+	display: block;
+	color: #BACDD7;
+	font-size: 2.4rem;
+	font-weight: 300;
+	padding: 2.0rem;
+	margin: 0;
+	background: #517A8F;
+}
+
+.aside a {
+	display: block;
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 300;
+	text-decoration: none;
+	border-bottom: 1px solid #88969B;
+	padding: 2.0rem;
+}
+
+.aside a:hover {
+	background: #58859C;
+}
+
+/* Initial off-screen position of the panel*/
+.aside-right {
+	right: -30.0rem;
+}
+
+/* Bring panel back into the window */
+.aside-right.aside-open {
+	right: 0;
+}
+
+.push-body {
+	position: relative;
+	left: 0;
+	overflow-x: hidden;
+}
+
+.push-body.push-left {
+	left: -30.0rem;
+}
+
+/* Transitions */
+
+.aside,
+.push-body {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}

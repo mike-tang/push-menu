@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Simple Push Menu: Right Side</title>
+		<meta name="author" content="Mike Tang" />
+		<link rel="stylesheet" type="text/css" href="css/push-menu.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+
+	<body class="push-body">
+		<nav id="aside" class="aside aside-right">
+			<h3>Push Menu</h3>
+			<a href="#">Item 1</a>
+			<a href="#">Item 2</a>
+			<a href="#">Item 3</a>
+			<a href="#">Item 4</a>
+			<a href="#">Item 5</a>
+			<a href="#">Item 6</a>
+			<a href="#">Item 7</a>
+		</nav>
+		
+		<div class="container">
+			<button id="aside-trigger">Toggle Push Menu</button>
+		</div>
+
+		<!-- Classie - class helper functions by David DeSandro: https://github.com/desandro/classie -->
+		<script src="js/classie.js"></script>
+		<script>
+			var panelRight = document.getElementById( 'aside' ),
+				panelTrigger = document.getElementById( 'aside-trigger' ),
+				body = document.body;
+
+			panelTrigger.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'push-left' );
+				classie.toggle( panelRight, 'aside-open' );
+			};
+
+		</script>
+	</body>
+</html>
